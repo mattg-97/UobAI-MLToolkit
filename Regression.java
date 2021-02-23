@@ -20,7 +20,7 @@ public class Regression {
         double w1 = 0;
         double w0 = 0;
         double cost = 0;
-        //JOptionPane.showMessageDialog(null, "Calculating...");
+        JOptionPane.showMessageDialog(null, "Calculating...");
         for (int i = 0; i < epochs; i++) {
             cost = 0;
             for (int j = 0; j < data.get(0).size(); j++) {

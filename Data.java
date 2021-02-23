@@ -36,21 +36,6 @@ public class Data {
         return output;
     }
 
-    /*
-     * Generates the points to plot a function.
-     */
-    public static List<List<Double>> plotFunction(double min, double max, double step, HypothesisFunction f_x){
-        List<List<Double>> output = new ArrayList<>();
-        output.add(new ArrayList<>());
-        output.add(new ArrayList<>());
-
-        for(double x = min; x <= max; x += step) {
-            output.get(0).add(x);
-            output.get(1).add(f_x.evaluate(x));
-        }
-
-        return output;
-    }
     public static List<List<Double>> fileChooser(){
         Component parent = new Component() {
         };
@@ -93,6 +78,6 @@ public class Data {
         else if (choice == 2) {
             return Data.datasetHandler();
         }
-    return null;
+        return null;
     }
 }

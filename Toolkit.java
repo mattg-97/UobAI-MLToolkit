@@ -14,8 +14,8 @@ public class Toolkit {
                 Regression.multiVariateLinearRegression();
             } else if (numericalRegressionChoice == 3){
                 Regression.nonLinearRegression();
-            } else if (numericalRegressionChoice == 5){
-                GradientDescent.logisticRegression();
+            } else if (numericalRegressionChoice == 4){
+                //logistic regression goes here
             } else if (numericalRegressionChoice == 5){
                 JOptionPane.showMessageDialog(null, "Goodbye");
             }
