@@ -1,31 +1,34 @@
+import javax.swing.*;
 import java.util.List;
 
 public class GradientDescent {
 
-    public static final String DATA_FILE = "data/MacdonellDF.csv";
-
-    public static void main(String[] args) {
+    public static void logisticRegression() {
 
         // -------------------------------------------------
         // Data and Graph setup.
         // -------------------------------------------------
-        List<List<Double>> data = Data.dataFrom(DATA_FILE);
+        List<List<Double>> data;
+        data = Data.fileOrInput();
+
+        double alpha = Double.parseDouble(JOptionPane.showInputDialog(null, "Enter the desired learning rate."));
+        final int epochs = Integer.parseInt(JOptionPane.showInputDialog(null, "Enter the desired amount of epochs."));
+
+
+
+
         Plot plt = new Plot("Height vs Finger Length", "Height", "Finger Length", data);
         sleep(500);
 
         // -------------------------------------------------
         // Gradient Descent
         // -------------------------------------------------
-        final int epochs = 100;  // Number of iterations we want to run
-        // through the algorithm
 
         // We want to predict h(x) = w1 * x + w0
         double w1 = 0;
         double w2 = 0;
         double w0 = 0;
 
-        // Learning rate
-        double alpha = 0.1;
 
         // Main Gradient Descent Function for Linear Regression
         for(int i = 0; i < epochs; i++) {
@@ -74,7 +77,7 @@ public class GradientDescent {
     }
 
     static double sigmoid(double z){
-        double sigmoid= (1/( 1 + Math.pow(Math.E,(-1*z))));
+        double sigmoid = (1/( 1 + Math.pow(Math.E,(-1*z))));
         return sigmoid;
     }
 }
