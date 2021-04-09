@@ -26,17 +26,21 @@ public class Data {
                     output.get(i).add(Double.parseDouble(rawValues[i]));
                 }
             }
+
             reader.close();
+
         } catch (IOException e) {
             e.printStackTrace();
         }
+
         return output;
     }
 
-    public static List<List<Double>> fileChooser(){
+    public static String fileChooser(){
         Component parent = new Component() {
         };
-        final JFileChooser chooser = new JFileChooser();
+        String userHome = System.getProperty("user.dir");
+        final JFileChooser chooser = new JFileChooser(userHome);
         FileNameExtensionFilter filter = new FileNameExtensionFilter(
                 ".csv files", "csv");
         chooser.setFileFilter(filter);
@@ -45,7 +49,9 @@ public class Data {
             System.out.println("You chose to open this file: " +
                     chooser.getSelectedFile().getName());
         }
-        return Data.dataFrom(chooser.getSelectedFile().getName());
+
+        return chooser.getSelectedFile().getName();
+
     }
 
     public static List<List<Double>> datasetHandler() {
@@ -68,7 +74,7 @@ public class Data {
         String userInput = JOptionPane.showInputDialog(null, "Would you like a choose a .csv file or input your own data?\n\n1. Choose a file\n2. Input data");
         int choice = Integer.parseInt(userInput);
         if (choice == 1){
-            return Data.fileChooser();
+            return Data.dataFrom(Data.fileChooser());
         }
         else if (choice == 2) {
             return Data.datasetHandler();

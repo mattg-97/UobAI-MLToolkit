@@ -1,0 +1,9 @@
+@relation 'New Text Document'
+
+@attribute Height numeric
+@attribute 'Wear Glasses' {No,Yes}
+@attribute 'Favourite Music Genre' {Classical,Country,Pop}
+@attribute Age {Toddler,Child,Teenager,YA,Adult,Elderly}
+
+@data
+154,Yes,Pop,?
