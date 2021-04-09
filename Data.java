@@ -26,13 +26,10 @@ public class Data {
                     output.get(i).add(Double.parseDouble(rawValues[i]));
                 }
             }
-
             reader.close();
-
         } catch (IOException e) {
             e.printStackTrace();
         }
-
         return output;
     }
 
@@ -48,9 +45,7 @@ public class Data {
             System.out.println("You chose to open this file: " +
                     chooser.getSelectedFile().getName());
         }
-
         return Data.dataFrom(chooser.getSelectedFile().getName());
-
     }
 
     public static List<List<Double>> datasetHandler() {
