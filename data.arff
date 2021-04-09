@@ -1,4 +1,11 @@
-Height,Wear Glasses,Favourite Music Genre,Age
+@relation 'New Text Document'
+
+@attribute Height numeric
+@attribute 'Wear Glasses' {No,Yes}
+@attribute 'Favourite Music Genre' {Classical,Country,Pop}
+@attribute Age {Toddler,Child,Teenager,YA,Adult,Elderly}
+
+@data
 83.97,No,Classical,Toddler
 80.05,No,Country,Toddler
 92.26,Yes,Classical,Toddler
@@ -14,11 +21,11 @@ Height,Wear Glasses,Favourite Music Genre,Age
 171.01,No,Pop,Teenager
 170.87,Yes,Pop,Teenager
 150.76,No,Pop,Teenager
-179.97,No,Classical,Young Adult
-168.01,Yes,Pop,Young Adult
-182.43,No,Pop,Young Adult
-166.51,No,Pop,Young Adult
-163.42,No,Pop,Young Adult
+179.97,No,Classical,YA
+168.01,Yes,Pop,YA
+182.43,No,Pop,YA
+166.51,No,Pop,YA
+163.42,No,Pop,YA
 179.45,Yes,Classical,Adult
 169.27,No,Pop,Adult
 178.54,Yes,Pop,Adult
