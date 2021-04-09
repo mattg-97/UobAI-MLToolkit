@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="Toolkit"
-            prefHeight="400.0" prefWidth="600.0">
+<TitledPane animated="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" text="AI - ML Toolkit" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/16" fx:controller="Controller">
+  <content>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="321.0" prefWidth="498.0">
+         <children>
+            <Button layoutX="97.0" layoutY="63.0" mnemonicParsing="false" prefHeight="103.0" prefWidth="110.0" text="Linear Regression" textAlignment="CENTER" wrapText="true" />
+            <Button layoutX="250.0" layoutY="63.0" mnemonicParsing="false" prefHeight="103.0" prefWidth="110.0" text="Logistic Regression" textAlignment="CENTER" wrapText="true" />
+            <Button layoutX="392.0" layoutY="63.0" mnemonicParsing="false" onAction="#naiveButton" prefHeight="103.0" prefWidth="110.0" text="Naive-Bayes" textAlignment="CENTER" wrapText="true" />
+            <Button layoutX="337.0" layoutY="209.0" mnemonicParsing="false" prefHeight="103.0" prefWidth="110.0" text="k-Nearest Neighbour" textAlignment="CENTER" wrapText="true" />
+            <Button layoutX="171.0" layoutY="209.0" mnemonicParsing="false" prefHeight="103.0" prefWidth="110.0" text="Decision Tree" textAlignment="CENTER" wrapText="true" />
+         </children></AnchorPane>
+  </content>
+</TitledPane>
 
-</AnchorPane>

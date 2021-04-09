@@ -20,13 +20,7 @@ public class NaiveBayes {
     public static void alpha(){
 
     }
-    public static void function(){
-
-    }
-
-
-    public static void main(String[] args) throws Exception {
-
+    public void function() throws Exception {
         CSVLoader loader = new CSVLoader();
         loader.setSource(new File(Data.fileChooser()));
         Instances data = loader.getDataSet();
@@ -59,12 +53,6 @@ public class NaiveBayes {
         System.out.println(data);
         System.out.println(naive.toString());
 
-
-
-
-
-
-
-
     }
+
 }

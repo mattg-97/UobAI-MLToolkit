@@ -14,7 +14,7 @@ public class Regression {
         return (1 / (1 + Math.pow(Math.E, (-1 * x))));
     }
 
-    public static void uniVariateLinearRegression() {
+    public void uniVariateLinearRegression() {
         List<List<Double>> data;
         data = Data.fileOrInput();
 
